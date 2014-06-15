@@ -6,8 +6,8 @@ public class ContactCreationTests extends TestBase {
 	
   @Test(groups="test")
   public void testNonEmptyContactCreation() throws Exception {
-	openMainPage();
-	initContactCreation();
+	app.getNavigationHelper().openMainPage();
+	app.getContactHelper().initContactCreation();
     ContactDate contact = new ContactDate();
     contact.firstname = "firtname";
     contact.secondname = "secondname";
@@ -17,21 +17,21 @@ public class ContactCreationTests extends TestBase {
     contact.workNumber = "345678";
     contact.mainEmail = "email@gmail.com";
     contact.reserveEmail = "email2@mail.com";
-    contact.bday = "27";
-    contact.bmonth = "3";
-    contact.byear = "1990";
+    contact.birthDay = "27";
+    contact.birthMonth = "3";
+    contact.birthYear = "1990";
     contact.selectedGroup = "1";
     contact.secondAddress = "some address";
     contact.secondPhoneNumber = "something else";
-    fillContactForm(contact);
-	submitContactCreation();
-   	returnToMainPage();
+    app.getContactHelper().fillContactForm(contact);
+	app.getContactHelper().submitContactCreation();
+   	app.getContactHelper().returnToMainPage();
   }
   
 @Test(groups="test")
   public void testEmptyContactCreation() throws Exception {
-	openMainPage();
-	initContactCreation();
+	app.getNavigationHelper().openMainPage();
+	app.getContactHelper().initContactCreation();
 	ContactDate contact = new ContactDate();
     contact.firstname = "";
     contact.secondname = "";
@@ -41,14 +41,14 @@ public class ContactCreationTests extends TestBase {
     contact.workNumber = "";
     contact.mainEmail = "";
     contact.reserveEmail = "";
-    contact.bday = "0";
-    contact.bmonth = "0";
-    contact.byear = "";
+    contact.birthDay = "0";
+    contact.birthMonth = "0";
+    contact.birthYear = "";
     contact.selectedGroup = "0";
     contact.secondAddress = "";
     contact.secondPhoneNumber = "";
-    fillContactForm(contact);
-    submitContactCreation();
-    returnToMainPage();
+    app.getContactHelper().fillContactForm(contact);
+    app.getContactHelper().submitContactCreation();
+    app.getContactHelper().returnToMainPage();
   }
 }
