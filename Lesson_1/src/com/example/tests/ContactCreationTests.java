@@ -8,7 +8,7 @@ public class ContactCreationTests extends TestBase {
   public void testNonEmptyContactCreation() throws Exception {
 	app.getNavigationHelper().openMainPage();
 	app.getContactHelper().initContactCreation();
-    ContactDate contact = new ContactDate();
+    ContactData contact = new ContactData();
     contact.firstname = "firtname";
     contact.secondname = "secondname";
     contact.address = "address";
@@ -32,7 +32,7 @@ public class ContactCreationTests extends TestBase {
   public void testEmptyContactCreation() throws Exception {
 	app.getNavigationHelper().openMainPage();
 	app.getContactHelper().initContactCreation();
-	ContactDate contact = new ContactDate();
+	ContactData contact = new ContactData();
     contact.firstname = "";
     contact.secondname = "";
     contact.address = "";

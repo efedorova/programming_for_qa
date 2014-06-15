@@ -2,7 +2,7 @@ package com.example.fw;
 
 import org.openqa.selenium.By;
 
-import com.example.tests.ContactDate;
+import com.example.tests.ContactData;
 
 public class ContactHelper extends HelperBase {
 
@@ -14,7 +14,7 @@ public class ContactHelper extends HelperBase {
 		click(By.linkText("add new"));
 	}
 
-	public void fillContactForm(ContactDate contact) {
+	public void fillContactForm(ContactData contact) {
 		type(By.name("firstname"), contact.firstname);
 		type(By.name("lastname"), contact.secondname);
 		type(By.name("address"), contact.address);

@@ -1,6 +1,6 @@
 package com.example.tests;
 
-public class ContactDate {
+public class ContactData {
 	public String firstname;
 	public String secondname;
 	public String address;
@@ -16,6 +16,6 @@ public class ContactDate {
 	public String secondAddress;
 	public String secondPhoneNumber;
 
-	public ContactDate() {
+	public ContactData() {
 	}
 }
